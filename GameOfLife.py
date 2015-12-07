@@ -3,10 +3,10 @@ import random
 import sys
 
 class GameOfLife(object):
-  array   = []
-  bugarr  = []
-  rows    = 0
-  cols    = 0
+  #array   = []
+  #bugarr  = []
+  #rows    = 0
+  #cols    = 0
   
   def __init__(self):
     print("Initializing game!")
@@ -15,7 +15,7 @@ class GameOfLife(object):
     self.rows = rows
     self.cols = cols
     self.array = np.zeros((rows,cols), dtype=np.bool_)
-    self.bugarr = np.zeros((rows,cols), dtype=np.int16)
+    #self.bugarr = np.zeros((rows,cols), dtype=np.int16)
 
   def InitArrayChecker(self):
     for r in range (0, self.rows):
@@ -69,7 +69,7 @@ class GameOfLife(object):
               if(self.array[r_i,c_i]==True):
                 sur_life += 1
 
-        self.bugarr[r,c] = sur_life
+        #self.bugarr[r,c] = sur_life
 		
         if self.array[r,c]==True:                   #If this cell is alive.
           if sur_life < 2:                           #Under population
